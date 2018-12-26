@@ -16,11 +16,15 @@ add_executable(cal_grade_s4_v1 sec4/v1/cal_grade.cpp)
 
 add_executable(ref_v1 side_study/ref_v1.cpp)
 add_executable(try_boost_v2 side_study/try_boost_v2.cpp)
+target_link_libraries(try_boost_v2 ${Boost_LIBRARIES})
 
 add_executable(report_grade sec4/v2/report_grades.cpp)
-
-target_link_libraries(try_boost_v2 ${Boost_LIBRARIES})
 target_link_libraries(report_grade ${Boost_LIBRARIES})
+
+add_executable(report_grade_v2 sec4/v3/report_main_v2.cpp sec4/v3/student_info.cpp)
+target_include_directories(report_grade_v2 PUBLIC sec4/v3/report_main_v2.h)
+target_link_libraries(report_grade_v2 ${Boost_LIBRARIES})
+
 
 #message(${Boost_LIBRARIES})
 #message(${Boost_INCLUDE_DIR})
