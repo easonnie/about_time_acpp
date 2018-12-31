@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.2)
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 #message(${Boost_LIBRARIES})
 #message(${Boost_INCLUDE_DIR})
 
@@ -21,6 +22,8 @@ add_executable(report_grade sec4/v2/report_grades.cpp)
 
 target_link_libraries(try_boost_v2 ${Boost_LIBRARIES})
 target_link_libraries(report_grade ${Boost_LIBRARIES})
+
+add_executable(c11_init_std side_study/c11_init_std.cpp)
 
 #message(${Boost_LIBRARIES})
 #message(${Boost_INCLUDE_DIR})
